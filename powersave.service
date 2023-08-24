@@ -3,8 +3,6 @@ Description=Set powersave mode
 
 [Service]
 Type=simple
-Restart=always
-RestartSec=1
 ExecStart=/opt/set_powersave_mode.sh
 
 [Install]
