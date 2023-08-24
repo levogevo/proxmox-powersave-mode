@@ -17,5 +17,8 @@ fi
 curl -o /opt/set_${DESIRED_MODE}_mode.sh https://raw.githubusercontent.com/levogevo/proxmox-powersave-mode/main/set_${DESIRED_MODE}_mode.sh
 curl -o /etc/systemd/system/$DESIRED_MODE.service https://raw.githubusercontent.com/levogevo/proxmox-powersave-mode/main/${DESIRED_MODE}.service
 
+chmod +x /opt/set_${DESIRED_MODE}_mode.sh
+
 systemctl start ${DESIRED_MODE}.service
 systemctl enable ${DESIRED_MODE}.service
+systemctl status ${DESIRED_MODE}.service
